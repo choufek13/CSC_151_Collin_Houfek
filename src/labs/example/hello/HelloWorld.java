@@ -5,6 +5,8 @@
 */
 
 
+package labs.example.hello;
+
 //this is my class name
 public class HelloWorld
 {

@@ -35,8 +35,8 @@ public class Mammal {
         System.out.println("The mammal is protecting.");
     }
 
-    public void walk() {
-        System.out.println("The mammal is walking.");
+    public void noise() {
+        System.out.println("The mammal is making noise.");
     }
 
     public void dig() {
@@ -45,5 +45,17 @@ public class Mammal {
 
     public void smile() {
         System.out.println("The mammal is smiling.");
+    }
+
+    public int walk() {
+        int south = 3;
+        int east = 4;
+
+        double distance = Math.sqrt(Math.pow(south, 2) + Math.pow(east, 2));
+        double thetaRadians = Math.atan2(east, south);
+        double thetaDegrees = Math.toDegrees(thetaRadians);
+
+        System.out.println("Angle at longest line: " + thetaDegrees);
+        return (int)distance;
     }
 }

@@ -47,6 +47,10 @@ public class Mammal {
         System.out.println("The mammal is smiling.");
     }
 
+    public void walk() {
+        System.out.println("The mammal is walking.");
+    }
+
     public int walk() {
         int south = 3;
         int east = 4;

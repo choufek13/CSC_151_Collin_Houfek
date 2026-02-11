@@ -1,3 +1,9 @@
+/*
+@author: Collin Houfek
+@date: 2/15/2026
+@purpose: Week 5 Lab
+*/
+
 package labs.example.physics;
 import java.lang.Math;
 

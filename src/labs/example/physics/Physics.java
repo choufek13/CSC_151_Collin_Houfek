@@ -10,6 +10,8 @@ import java.lang.Math;
 public class Physics {
 
     final static double GRAVITY = 9.81;
+    
+//write the methods and equations
 
     public static double getDistance(double v, double t) {
         double x = v * t;
@@ -37,7 +39,7 @@ public class Physics {
     }
 
     public static double getKineticEnergy(double m, double v) {
-        double ke = 1/2 * m * v * v;
+        double ke = 0.5 * m * v * v;
         return ke;
     }
 

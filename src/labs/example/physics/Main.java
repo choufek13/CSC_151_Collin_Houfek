@@ -1,4 +1,4 @@
-package labs.example.physics
+package labs.example.physics;
 
 public class main {
     

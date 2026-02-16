@@ -31,7 +31,7 @@ public class Main {
     if(distanceToEarthFromSun < 92947266.72) {
         physics.logEarthToSunInvalidDistance(distanceToEarthFromSun);
     }
-    else(distanceToEarthFromSun >= 92947366.72) {
+    else {
         physics.logEarthToSunValidDistance(distanceToEarthFromSun);
     }
 

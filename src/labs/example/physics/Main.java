@@ -16,6 +16,7 @@ public class Main {
         double speedOfLightInMPH = physics.getLightSpeedInMPH();
         double timeToEarth = physics.getTimeFromSunToEarthInHours();
         double distance = physics.getDistance(speedOfLightInMPH, timeToEarth);
+        double distanceToEarthFromSun = physics.getKnownDistanceToEarth();
 
 //week 6 lab, create if else statement for 3-4-5 triangle
     if(angleInDegrees > 37 || angleInDegrees < 36.87) {
@@ -25,6 +26,13 @@ public class Main {
     else {
         physics.logValidAngleInfo(angleInDegrees);
         System.out.println("logging the angle  xy degrees. This is a valid 3-4-5 triangle.");
+    }
+//part 2 of week 6 lab
+    if(distanceToEarthFromSun < 92947266.72) {
+        physics.logEarthToSunInvalidDistance(distanceToEarthFromSun);
+    }
+    else(distanceToEarthFromSun >= 92947366.72) {
+        physics.logEarthToSunValidDistance(distanceToEarthFromSun);
     }
 
     DecimalFormat DecimalFormat = new DecimalFormat ("#,###.##");
@@ -45,13 +53,5 @@ public class Main {
     System.out.println("Work:" + work + "Joules");
     System.out.println("Kinteic Energy:" + kineticEnergy + "Joules");
     System.out.println("Potential Energy:" + potentialEnergy + "Joules");
-
-//part 2 of week 6 lab
-    if(distance < 92947266.72) {
-        physics.logEarthToSunInvalidDistance(distance);
-    }
-    else(distance >= 92947366.72) {
-        physics.logEarthToSunValidDistance(distance);
-    }
     }
 }

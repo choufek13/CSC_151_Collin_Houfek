@@ -49,7 +49,7 @@ public class Physics {
     }
 //write one for theta
     public static double getTheta(int xVal, int yVal) {
-        double theta = Math.atan2(xVal,yVal) * 180/3.1415
+        double theta = Math.atan2(xVal,yVal) * 180/3.1415;
         return theta;
     }
 }

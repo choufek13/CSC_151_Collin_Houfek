@@ -18,7 +18,7 @@ public class Main {
         double force = physics.getForce(10, 6);
         double work = physics.getWork(12, 4);
         double KineticEnergy = physics.getKineticEnergy(8, 2);
-        double PotentialEnergy = physics.getPotentialEnergy(9, 3);
+        double PotentialEnergy = physics.getPotentialEnergy(9, 3, 5);
     
 //print return value with proper unit
     System.out.println("Distance:" + distance + "miles" );

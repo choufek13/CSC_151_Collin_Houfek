@@ -13,38 +13,43 @@ public class Physics {
     
 //write the methods and equations
 
-    public static double getDistance(double v, double t) {
-        double x = v * t;
-        return x;
+    public static double getDistance(int velocity, int time) {
+        double distance = velocity * time;
+        return distance;
     }
 
-    public static double getVelocity(double x, double t) {
-        double v = x / t;
-        return v;
+    public static double getVelocity(int distance, int time) {
+        double velocity = x / t;
+        return velocity;
     }
 
-    public static double getMomentum(double m, double v) {
-        double p = m * v;
-        return p;
+    public static double getMomentum(int mass, int velocity) {
+        double momentum = mass * velocity;
+        return momentum;
     }
 
-    public static double getForce(double m, double a) {
-        double f = m * a;
-        return f;
+    public static double getForce(int mass, int acceleration) {
+        double force = mass * acceleration;
+        return force;
     }
 
-    public static double getWork(double f, double d) {
-        double w = f * d;
-        return w;
+    public static double getWork(int force, int d) {
+        double work = force * d;
+        return work;
     }
 
-    public static double getKineticEnergy(double m, double v) {
-        double ke = 0.5 * m * v * v;
-        return ke;
+    public static double getKineticEnergy(int mass, int velocity) {
+        double kineticEnergy = 0.5 * mass * velocity * velocity;
+        return kineticEnergy;
     }
 
-    public static double getPotentialEnergy(double m, double g, double h) {
-        double pe = m * g * h;
-        return pe;
+    public static double getPotentialEnergy(int mass, int gravity, int height) {
+        double potentialEnergy = mass * gravity * height;
+        return potentialEnergy;
+    }
+//write one for theta
+    public static double getTheta(int xVal, int yVal) {
+        double theta = Math.atan2(xVal,yVal) * 180/3.1415
+        return theta;
     }
 }

@@ -19,7 +19,7 @@ public class Physics {
     }
 
     public static double getVelocity(int distance, int time) {
-        double velocity = x / t;
+        double velocity = distance / time;
         return velocity;
     }
 

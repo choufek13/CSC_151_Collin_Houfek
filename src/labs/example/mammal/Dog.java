@@ -12,4 +12,14 @@ public class Dog extends Mammal {
     public void bark() {
         System.out.println("woof....woof....woof");
     }
+    public void fetch() {
+        fetch();
+        System.out.println("The dog runs around");
+        //runs around
+        //returns something
+    }
+    public void protect() {
+        protect();
+        //dog is facing away from owner to look out for anything dangerous
+    }
 }

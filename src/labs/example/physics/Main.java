@@ -16,7 +16,6 @@ public class Main {
         double speedOfLightInMPH = physics.getLightSpeedInMPH();
         double timeToEarth = physics.getTimeFromSunToEarthInHours();
         double distance = physics.getDistance(speedOfLightInMPH, timeToEarth);
-        double distanceToEarthFromSun = physics.getKnownDistanceToEarth();
 
 //week 6 lab, create if else statement for 3-4-5 triangle
     if(angleInDegrees > 37 || angleInDegrees < 36.87) {

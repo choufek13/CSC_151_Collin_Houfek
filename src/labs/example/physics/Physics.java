@@ -33,8 +33,8 @@ public class Physics {
         return force;
     }
 
-    public static double getWork(int force, int d) {
-        double work = force * d;
+    public static double getWork(int force, int distance) {
+        double work = force * distance;
         return work;
     }
 

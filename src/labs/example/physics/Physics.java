@@ -52,4 +52,35 @@ public class Physics {
         double theta = Math.atan2(xVal,yVal) * 180/3.1415;
         return theta;
     }
+//write one for angles
+    public double calculateAngleInDegrees(int opposite, int adjacent) {
+        double angleRadians = Math.atan(opposite / adjacent);
+        return Math.toDegrees(angleRadians);
+    }
+    public void logInvalidAngleInfo(double angleInDegrees) {
+        System.out.println("logging the angle " + angleInDegrees + "degrees. This is not a right angle.");
+    }
+    public void logValidAngleInfo(double angleInDegrees) {
+        System.out.println("logging the angle " + angleInDegrees + "degrees. This is a valid 3-4-5 triangle.");
+    }
+
+//write one for getLightSpeedInMPH
+    public static double getLightSpeedInMPH() {
+        //186282 miles per second, so convert to miles per hour
+        return 186282 * 3600
+    }
+//write one for getTimeFromSunToEarthInHours
+    public static double getTimeFromSunToEarthInHours() {
+        //takes about 8.317 minutes for light to reach earth
+        double minutes = 8.317
+        return mintues / 60.0;
+    }
+
+    public static double getKnownDistanceToEarth() {
+        return 92947266.72;
+    }
+
+    public void logEarthToSunInvalidDistance(double distance) {
+        System.out.println("The calculated distance" + distance + "miles is invalid.");
+    }
 }

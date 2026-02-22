@@ -20,19 +20,21 @@ public class Main {
 //week 6 lab, create if else statement for 3-4-5 triangle
     if(angleInDegrees > 37 || angleInDegrees < 36.87) {
         physics.logInivalidAngleInfo(angleInDegrees);
-        System.out.println("logging the angle xy degrees. This is not a right angle.");
     }
     else {
         physics.logValidAngleInfo(angleInDegrees);
-        System.out.println("logging the angle  xy degrees. This is a valid 3-4-5 triangle.");
     }
-//part 2 of week 6 lab
-    if(distanceToEarthFromSun < 92947266.72) {
-        physics.logEarthToSunInvalidDistance(distanceToEarthFromSun);
-    }
-    else {
-        physics.logEarthToSunValidDistance(distanceToEarthFromSun);
-    }
+//part 2 of week 6 lab, earth to sun distance
+    double velocity = physics.getLightSpeedInMPH();
+    double time = physics.getTimeFromSunToEarthInHours();
+    double distance = physics.getDistance(velocity, time);
+    double knownDistance = physics.getKnownDistanceToEarth();
+
+        if (Math.abs(distance - knownDistance) > 1) {
+            physics.logEarthToSunInvalidDistance(distance);
+        } else {
+            System.out.println("Distance is valid: " + distance + " miles.");
+        }
 
     DecimalFormat DecimalFormat = new DecimalFormat ("#,###.##");
     

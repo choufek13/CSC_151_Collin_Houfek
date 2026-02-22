@@ -13,21 +13,17 @@ public class Main {
 
         double angleInDegrees = physics.getTheta(3, 4);
 
-        double speedOfLightInMPH = physics.getLightSpeedInMPH();
-        double timeToEarth = physics.getTimeFromSunToEarthInHours();
-        double distance = physics.getDistance(speedOfLightInMPH, timeToEarth);
-
 //week 6 lab, create if else statement for 3-4-5 triangle
     if(angleInDegrees > 37 || angleInDegrees < 36.87) {
-        physics.logInivalidAngleInfo(angleInDegrees);
+        physics.logInvalidAngleInfo(angleInDegrees);
     }
     else {
         physics.logValidAngleInfo(angleInDegrees);
     }
 //part 2 of week 6 lab, earth to sun distance
-    double velocity = physics.getLightSpeedInMPH();
-    double time = physics.getTimeFromSunToEarthInHours();
-    double distance = physics.getDistance(velocity, time);
+    double speedOfLightInMPH = physics.getLightSpeedInMPH();
+    double timeToEarth = physics.getTimeFromSunToEarthInHours();
+    double earthToSunDistance = physics.getDistance(speedOfLightInMPH, timeToEarth);
     double knownDistance = physics.getKnownDistanceToEarth();
 
         if (Math.abs(distance - knownDistance) > 1) {

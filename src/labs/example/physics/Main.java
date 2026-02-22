@@ -26,10 +26,10 @@ public class Main {
     double earthToSunDistance = physics.getDistance(speedOfLightInMPH, timeToEarth);
     double knownDistance = physics.getKnownDistanceToEarth();
 
-        if (Math.abs(distance - knownDistance) > 1) {
-            physics.logEarthToSunInvalidDistance(distance);
+        if (Math.abs(earthToSunDistance - knownDistance) > 1) {
+            physics.logEarthToSunInvalidDistance(earthToSunDistance);
         } else {
-            System.out.println("Distance is valid: " + distance + " miles.");
+            System.out.println("Distance is valid: " + earthToSunDistance + " miles.");
         }
 
     DecimalFormat DecimalFormat = new DecimalFormat ("#,###.##");
@@ -39,8 +39,8 @@ public class Main {
         double momentum = physics.getMomentum(4, 9);
         double force = physics.getForce(10, 6);
         double work = physics.getWork(12, 4);
-        double KineticEnergy = physics.getKineticEnergy(8, 2);
-        double PotentialEnergy = physics.getPotentialEnergy(9, 3, 5);
+        double kineticEnergy = physics.getKineticEnergy(8, 2);
+        double potentialEnergy = physics.getPotentialEnergy(9, 3, 5);
     
 //print return value with proper unit
     System.out.println("Distance:" + distance + "miles" );

@@ -67,12 +67,12 @@ public class Physics {
 //write one for getLightSpeedInMPH
     public static double getLightSpeedInMPH() {
         //186282 miles per second, so convert to miles per hour
-        return 186282 * 3600
+        return 186282 * 3600;
     }
 //write one for getTimeFromSunToEarthInHours
     public static double getTimeFromSunToEarthInHours() {
         //takes about 8.317 minutes for light to reach earth
-        double minutes = 8.317
+        double minutes = 8.317;
         return mintues / 60.0;
     }
 

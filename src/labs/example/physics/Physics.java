@@ -73,7 +73,7 @@ public class Physics {
     public static double getTimeFromSunToEarthInHours() {
         //takes about 8.317 minutes for light to reach earth
         double minutes = 8.317;
-        return mintues / 60.0;
+        return minutes / 60.0;
     }
 
     public static double getKnownDistanceToEarth() {

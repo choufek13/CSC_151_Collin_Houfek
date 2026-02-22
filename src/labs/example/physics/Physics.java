@@ -13,7 +13,7 @@ public class Physics {
     
 //write the methods and equations
 
-    public static double getDistance(int velocity, int time) {
+    public static double getDistance(double velocity, double time) {
         double distance = velocity * time;
         return distance;
     }

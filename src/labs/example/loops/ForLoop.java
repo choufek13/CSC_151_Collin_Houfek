@@ -22,11 +22,12 @@ public class ForLoop {
             System.out.println("Loop iteration:" + number);
         }
         System.out.println("The loop is complete.");
+        return;
     }
 
 
 //step 3 of lab
-    private static void sumTwoNumbers();
+    private int sumTwoNumbers(int x, int y);
 
 
 }

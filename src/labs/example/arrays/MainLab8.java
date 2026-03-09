@@ -8,7 +8,7 @@ package labs.example.arrays;
 
 import java.util.Random;
 
-public class Main {
+public class MainLab8 {
     public static void main(String[] args) {
         ArrayOperations operations = new ArrayOperations();
         System.out.println("--- Testing createNewArray ---");

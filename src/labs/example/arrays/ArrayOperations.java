@@ -4,7 +4,7 @@
 @purpose: Week 8 Lab
 */
 
-package labs/example.arrays;
+package labs.example.arrays;
 
 //create new array, part one of lab
 public class ArrayOperations {

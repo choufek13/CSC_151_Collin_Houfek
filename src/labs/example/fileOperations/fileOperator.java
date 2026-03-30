@@ -9,7 +9,7 @@ package labs.example.fileOperations;
 import java.io.*;
 import java.util.*;
 
-public class FileOperator {
+public class fileOperator {
 
     public static void main(String[] args) {
         String filePath = "src/labs/example/fileOperations/files/users.csv";

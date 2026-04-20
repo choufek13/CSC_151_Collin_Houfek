@@ -13,30 +13,26 @@ import java.util.ArrayList;
 
 public class LoggerLab {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        try {
-            // Step 1 & 2: Open file
-            BufferedReader file = openErrorLog();
+        // Part 1
+        BufferedReader apiReader = new BufferedReader(new FileReader("api_error.log"));
+        getDiskSpaceErrorsWithIPAddress(apiReader);
 
-            // Step 3 & 4: Count error types
-            getCountOfErrorTypes(file);
+        // Parts 3–6 use overloaded method
+        BufferedReader httpReader;
 
-            // Close file after use
-            file.close();
+        httpReader = openErrorLog("http_access_log");
+        getGMTOffset(httpReader);
 
-            // Step 5: Re-open file
-            BufferedReader file2 = openErrorLog();
+        httpReader = openErrorLog("http_access_log");
+        getHTTPCodes(httpReader);
 
-            // Count memory limit exceeded occurrences
-            getMemoryLimitExceededCount(file2);
+        httpReader = openErrorLog("http_access_log");
+        getResponseSizes(httpReader);
 
-            // Close again
-            file2.close();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        httpReader = openErrorLog("http_access_log");
+        groupHTTPMethodsAndEndPoints(httpReader);
     }
 
     // Opens file and returns BufferedReader
@@ -233,26 +229,5 @@ public class LoggerLab {
         for (String method : methods) {
             System.out.println(method);
         }
-    } 
-    public static void main(String[] args) throws IOException {
-
-        // Part 1
-        BufferedReader apiReader = new BufferedReader(new FileReader("api_error.log"));
-        getDiskSpaceErrorsWithIPAddress(apiReader);
-
-        // Parts 3–6 use overloaded method
-        BufferedReader httpReader;
-
-        httpReader = openErrorLog("http_access_log");
-        getGMTOffset(httpReader);
-
-        httpReader = openErrorLog("http_access_log");
-        getHTTPCodes(httpReader);
-
-        httpReader = openErrorLog("http_access_log");
-        getResponseSizes(httpReader);
-
-        httpReader = openErrorLog("http_access_log");
-        groupHTTPMethodsAndEndPoints(httpReader);
     } 
 }

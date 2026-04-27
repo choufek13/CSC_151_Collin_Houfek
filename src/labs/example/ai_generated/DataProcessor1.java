@@ -9,7 +9,7 @@ package labs.example.ai_generated;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DataProcessor {
+public class DataProcessor1 {
 
     private String mainTitle;
     private int maxDataPoints = 50;

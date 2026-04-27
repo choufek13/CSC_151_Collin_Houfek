@@ -10,7 +10,7 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 
-public class Server {
+public class Server1 {
     public static void main(String[] args) {
         try {
             ServerSocket serverSocket = new ServerSocket(5000);

@@ -9,7 +9,7 @@ package labs.example.ai_generated;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DataProcessor1 {
+public class DataProcessor2 {
 
     private String mainTitle;
     private int maxDataPoints = 50;
@@ -18,7 +18,7 @@ public class DataProcessor1 {
     private List<String> dataEntries;
     private List<Integer> processedValues;
 
-    public DataProcessor(String mTitle) {
+    public DataProcessor1(String mTitle) {
         this.mainTitle = mTitle;
         this.dataEntries = new ArrayList<>();
         this.processedValues = new ArrayList<>();
@@ -107,7 +107,7 @@ public class DataProcessor1 {
     }
 
     public static void main(String[] args) {
-        DataProcessor processor = new DataProcessor("Sample Data Analysis");
+        DataProcessor2 processor = new DataProcessor2("Sample Data Analysis");
 
         processor.addDataEntry("10, 20,30");
         processor.addDataEntry("40, 50, 60");

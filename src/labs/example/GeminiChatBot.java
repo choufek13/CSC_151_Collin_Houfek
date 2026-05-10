@@ -53,20 +53,19 @@ public class GeminiChatBot {
             connection.setDoOutput(true);
 
             // JSON request body
-            String jsonInput = """
-                    {
-                      "contents": [
-                        {
-                          "parts": [
-                            {
-                              "text": "%s"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                    """.formatted(userInput);
-
+            String jsonInput = 
+                    "{"
+                    + "\"contents\": ["
+                    + "{"
+                    + "\"parts\": ["
+                    + "{"
+                    + "\"text\": \"" + userInput + "\""
+                    + "}"
+                    + "]"
+                    + "}"
+                    + "]"
+                    + "}";
+                    
             // Send request
             try (OutputStream os = connection.getOutputStream()) {
                 byte[] input = jsonInput.getBytes(StandardCharsets.UTF_8);
